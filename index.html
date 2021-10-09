@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    #internal {
+        color: blue;
+    }
+</style>
     <link rel="icon" sizes="16x16" href="https://image.shutterstock.com/image-vector/green-cactus-clay-flower-pot-260nw-1103556998.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +19,8 @@
 <body>
     <header>
         <h1 id="start">Lab 2 Meeting Minutes</h1>
-        <h3>Discussion about Lab 2</h3>
-        <h3>Date: 10/02/2021</h3>
+        <h3 id="internal">Discussion about Lab 2</h3>
+        <h3 style="color:orange">Date: 10/02/2021</h3>
         <div>Sections</div>
         <nav>
             <ol>
@@ -23,27 +32,31 @@
                 <li><a href="#recordings">Recordings</a></li>
                 <li><a href="#forms">Forms</a></li>
                 <li><a href="#end">Bottom of Document</a></li>
+                <li id="sneaky">Sneaky Part</li>
             </ol>
             <br />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
-            alt="HTML picture">
         </nav>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+        alt="HTML picture">
     </header>
 
     <main>
         <hr />
         <section>
             <h2 id="attendance">Attendance</h2>
-                <ul>
+                <ul class="attendee">
                     <li><b>David Thai</b></li>
                     <li><i>Unknown User</i></li>
+                    <li>User 2</li>
+                    <li>User 3</li>
+                    <li>User 4</li>
+                    <li>Random User</li>
                 </ul>
         </section>
     
         <section>
             <h2 id="agenda">Agenda</h2>
                 <p>In this meeting, we will discuss the use of HTML and DevTools. It is important to discuss the different elements of HTML.</p>
-                <br />
                 <span>This is the first time we go into a little depth with HTML and DevTools. This is an example of the HTML basic skeleton:</span>
                 <br />
                 <img src="https://www.w3schools.com/html/img_notepad.png" alt="HTML basic skeleton">
@@ -73,9 +86,9 @@
         <section>
 
             <h2 id="recordings">Recordings</h2>
-            <h3>Audio</h3>
+            <h3 class="media">Audio</h3>
             <figure>
-            <audio
+            <audio class="media"
                 controls
                 src="/recording.mp4">
             </audio>
@@ -99,9 +112,9 @@
 
         <section>
             <h2 id="forms">Forms</h2>
-            <form>
+            <form class="interactive">
                 <input type="text" placeholder="Enter Your Name"/>
-                <button>Submit</button>
+                <button type="button">Submit</button>
             </form>
 
             <br />
@@ -112,7 +125,7 @@
 
             <br />
 
-            <label for="myPotatoes">Choose a method to prepare potatoes:</label>
+            <label class="red" for="myPotatoes">Choose a method to prepare potatoes:</label>
             <input list="potatoes" id="myPotatoes" name="myPotatoes" />
             <datalist id="potatoes">
                 <option value="Baked"></option>
@@ -128,25 +141,35 @@
                 <fieldset>
                     <legend>Choose your favorite icecream flavor</legend>
                     <input type="radio" id="vanilla" name="icecream">
-                    <label for="vanilla">Vanilla</label><br />
+                    <label for="vanilla">Vanilla</label>
 
                     <input type="radio" id="chocolate" name="icecream">
-                    <label for="chocolate">Chocolate</label><br />
+                    <label for="chocolate">Chocolate</label>
 
                     <input type="radio" id="mintchip" name="icecream">
-                    <label for="mintchip">Mintchip</label><br />
+                    <label for="mintchip">Mintchip</label>
+
+                    <input type="radio" id="coffee" name="icecream">
+                    <label for="mintchip">Coffee</label>
                 </fieldset>
             </form>
 
             <br />
 
-            <p> Checklist of CSE 110:</p>
+            <section id="mychecklist">
+                <p> Checklist of CSE 110:</p>
                 <input type="checkbox" id="lab2" name="lab2">
                 <label for="lab2">Lab 2</label>
 
-            <br />
                 <input type="checkbox" id="reviewquiz" name="reviewquiz">
-                <label for="reviewquiz">Review Quiz</label>
+                <label for="reviewquiz">Review Quiz 1</label>
+
+                <input type="checkbox" id="reviewquiz" name="reviewquiz">
+                <label for="reviewquiz">Lab 3</label>
+
+                <input type="checkbox" id="reviewquiz" name="reviewquiz">
+                <label for="reviewquiz">Review Quiz 2</label>
+            </section>
 
             <br />
             <br/>
